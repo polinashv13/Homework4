@@ -3,7 +3,10 @@ g = int(input("Введите размерность массива: "))
 masg = []
 for i in range(g):
     masg.append(random.randint(0,7))
-mn = min(masg)
+mn = 8
+for i in range(g):
+    if masg[i] < mn:
+        mn=masg[i]
 Delta = int(input("Введите Delta: "))
 c = 0
 for i in masg:
